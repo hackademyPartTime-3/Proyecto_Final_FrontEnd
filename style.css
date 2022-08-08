@@ -1,0 +1,40 @@
+*{
+    font-family: 'Cormorant SC', serif;
+}
+
+.bg-img{
+    width: 70%;
+    height: 80vh;
+    background-image: url("./interior-design-has-sofa-empty-dark-wall-background-3d-rendering\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo{
+    font-size: 70px;
+    
+}
+
+#altura-menu{
+    height: 60vh;
+
+}
+
+.titulo:hover{
+    transform: scale(1.1);
+}
+
+
+.card:hover{
+    transform: scale(1.3);
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.img__card{
+    width: 100%;
+    height: 300px;
+}

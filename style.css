@@ -3,7 +3,7 @@
 }
 
 .bg-img{
-    width: 70%;
+    width: 90%;
     height: 80vh;
     background-image: url("./interior-design-has-sofa-empty-dark-wall-background-3d-rendering\ \(1\).jpg");
     background-size: cover;
@@ -13,6 +13,8 @@
 
 .titulo{
     font-size: 70px;
+    opacity: 0;
+    transition: .4s;
     
 }
 
@@ -23,6 +25,7 @@
 
 .titulo:hover{
     transform: scale(1.1);
+    transition: .4s;
 }
 
 
@@ -38,3 +41,85 @@
     width: 100%;
     height: 300px;
 }
+
+.homeList:hover {
+    transform: scale(1.1);
+}
+
+.homeList{
+    font-style: italic;
+    transition: all 0.15s ease-in-out;
+}
+
+#loginSide{
+    height: 50vh;
+    width: 50%;
+    position: fixed;
+    z-index: 20;
+    right: -100%;
+    background-color: #f3f2f1;
+    transition: 0.5s ease-in-out;
+}
+
+.active_login{
+    right: 0% !important;
+
+}
+
+#exitLogin, #exitRegister{
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
+
+#exitLogin:hover, #exitRegister:hover{
+    transform: scale(1.1);
+}
+
+.bg-navbar{
+    background-color: #b1a8a126;
+    box-shadow: rgb(0 0 0 / 22%) 0 0 15px;
+}
+
+#registerSide{
+    height: 80vh;
+    width: 50%;
+    position: fixed;
+    z-index: 20;
+    right: -100%;
+    background-color:#f3f2f1;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.sectionCards{
+    margin: 10px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    background-color: #b1a8a126;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+    width: 140px;
+    box-shadow: rgb(0 0 0 / 15%) 5px 5px 15px;
+}
+
+
+.sectionCards:hover {
+    color: black;
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
+@media (max-width: 991px) {
+    .sectionDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+h1{
+    padding-left: 10%;
+}
+

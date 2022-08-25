@@ -79,4 +79,64 @@ let register = document.querySelector('#toggleRegister');
     registerSide.classList.remove('active_login');
 });
 
+fetch("MOCK_DATA.json")
+.then(response => response.json())
+.then(data =>{
+    // console.log(data);
+
+    let categories = data.map(element => element.category)
+    // console.log(categories);
+    
+    let categoriasResumindas = new Set(categories);
+    // console.log(categories);
+
+    let conversion = Array.from(categoriasResumindas)
+    // console.log(conversion);
+
+    let category__cards = document.querySelector ('#category__cards');
+    conversion.forEach(element =>{
+        let columnas = document.createElement('div');
+        columnas.classList.add("col-6", "col-md-2", "d-flex", "justify-content-center")
+        columnas.innerHTML = `
+        <div class="card-body d-flex flex-column justify-content-around">
+              <h5 class="card-title"></h5>
+              <p class=""">/p>
+              <h6 class="card-title "></h6><br>
+              <a href="#" class="btn btn-dark text-white my-3">Buy now</a>
+        </div>
+
+        
+        `
+    })
+
+})
+
+// Timer
+let days = document.querySelector('#days');
+let hours = document.querySelector('#hours');
+let minutes = document.querySelector('#minutes');
+let seconds = document.querySelector('#seconds');
+
+setInterval(timer, 1000);
+
+function timer() {
+
+    let finalTime = new Date(2022,9,8);
+    // console.log(finalTime);
+    let todayTime = new Date();
+    
+    let diference = finalTime - todayTime;
+
+    let segundos = Math.floor(diference / 1000 % 60);
+    // console.log(segundos);
+    let minutos = Math.floor(diference / (1000 * 60) % 60);
+    // console.log(minutos);
+    let horas = Math.floor(diference / (1000 * 60 * 60) % 24);
+    let dias = Math.floor(diference / (1000 * 60 * 60 * 24));
+
+    days.innerHTML = dias;
+    hours.innerHTML = horas;
+    minutes.innerHTML = minutos;
+    seconds.innerHTML = segundos;
+}
  
